@@ -1,5 +1,6 @@
 import "./App.css";
 import { memo, useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const ASCII = [
   " ",
@@ -157,6 +158,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
