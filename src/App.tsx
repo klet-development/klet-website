@@ -128,6 +128,7 @@ function App() {
 
   useEffect(() => {
     const hasHover = window.matchMedia("(hover: hover)").matches;
+    console.log("Hover support:", hasHover);
     if (!hasHover) {
       setIsHovering(true);
     }

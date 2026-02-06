@@ -18,14 +18,16 @@
 .grid-container {
   max-width: 700px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 0;
-  border: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
 }
 
 .grid-container > div {
-  border: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -40,27 +42,38 @@
     color 0.3s ease;
 }
 
+/* Title */
 .div1 {
   grid-area: 1 / 1 / 2 / 6;
-  font-size: 3rem;
+  font-size: 1.4rem;
 }
 
+/* Message */
 .div2 {
-  grid-area: 2 / 1 / 3 / 4;
+  padding: 16px;
+  grid-area: 2 / 1 / 3 / 6;
 }
 
+/* Me */
 .div3 {
-  grid-area: 2 / 4 / 3 / 6;
+  grid-area: 3 / 4 / 5 / 6;
   padding: 16px;
 }
+
+/* Paris */
 .div4 {
-  grid-area: 3 / 1 / 4 / 3;
+  grid-area: 3 / 1 / 4 / 4;
 }
+
+/* Toulouse */
 .div5 {
-  grid-area: 3 / 3 / 4 / 5;
+  grid-area: 4 / 1 / 5 / 4;
 }
+
+/* Socials */
 .div6 {
-  grid-area: 4 / 1 / 5 / 2;
+  grid-area: 5 / 1 / 6 / 2;
+  padding: 16px;
   a {
     color: var(--main-text-color);
     text-decoration: none;
@@ -73,8 +86,10 @@
     }
   }
 }
+
+/* Ascii art */
 .div7 {
-  grid-area: 4 / 2 / 5 / 5;
+  grid-area: 5 / 2 / 6 / 6;
   position: relative;
   overflow: hidden;
   background-color: var(--main-background-color);
@@ -86,7 +101,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
-  --cell-size: 26px;
+  --cell-size: 20px;
   grid-template-columns: repeat(24, var(--cell-size));
   grid-template-rows: repeat(6, var(--cell-size));
   width: 200%;
@@ -98,11 +113,49 @@
 
 .ascii-grid > span {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1;
   text-align: center;
   user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .div1 {
+    font-size: 3rem;
+  }
+
+  .div2 {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+
+  .div3 {
+    grid-area: 2 / 4 / 3 / 6;
+  }
+
+  .div4 {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
+  .div5 {
+    grid-area: 3 / 3 / 4 / 5;
+  }
+
+  .div6 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .div7 {
+    grid-area: 4 / 2 / 5 / 6;
+  }
+
+  .ascii-grid {
+    --cell-size: 24px;
+  }
 }
