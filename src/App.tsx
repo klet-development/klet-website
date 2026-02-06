@@ -1,36 +1,164 @@
-import './App.css'
+import "./App.css";
+import { memo, useEffect, useState } from "react";
+
+const ASCII = [
+  " ",
+  "!",
+  '"',
+  "#",
+  "$",
+  "%",
+  "&",
+  "'",
+  "(",
+  ")",
+  "*",
+  "+",
+  ",",
+  "-",
+  ".",
+  "/",
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  ":",
+  ";",
+  "<",
+  "=",
+  ">",
+  "?",
+  "@",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+  "[",
+  "\\",
+  "]",
+  "^",
+  "_",
+  "`",
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+  "{",
+  "|",
+  "}",
+  "~",
+];
+
+const COLORS = ["255,255,0", "0,255,255", "255,0,255"];
+
+const AsciiChar = memo(({ isActive }: { isActive: boolean }) => {
+  const [char, setChar] = useState(" ");
+  const [color, setColor] = useState(COLORS[0]);
+
+  useEffect(() => {
+    if (!isActive) {
+      setChar(" ");
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setChar(ASCII[~~(Math.random() * ASCII.length)]);
+      setColor(COLORS[~~(Math.random() * COLORS.length)]);
+    }, 75);
+
+    return () => clearInterval(interval);
+  }, [isActive]);
+
+  return <span style={{ color: `rgb(${color})` }}>{char}</span>;
+});
 
 function App() {
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    const hasHover = window.matchMedia("(hover: hover)").matches;
+    if (!hasHover) {
+      setIsHovering(true);
+    }
+  }, []);
+
   return (
     <div className="app">
-      <nav className="nav">
-        <div className="nav-links">
-          <a href="#xp" className="nav-link">XP</a>
-          <a href="#contact" className="nav-link">CONTACT</a>
+      <div className="grid-container">
+        <div className="div1">[ KLET DEVELOPMENT ]</div>
+        <div className="div2">Building meaningful products since 2016</div>
+        <div className="div3">by Kameron Argis</div>
+        <div className="div4">Paris</div>
+        <div className="div5">Toulouse</div>
+        <div className="div6">
+          <a href="https://www.linkedin.com/in/kameronargis/" target="_blank">
+            Linkedin
+          </a>
         </div>
-        <button className="menu-btn" aria-label="Menu">
-          <span className="dot"></span>
-          <span className="dot"></span>
-          <span className="dot"></span>
-        </button>
-      </nav>
-
-      <main className="main">
-        <div className="content">
-          <h1 className="name">KAMERON ARGIS</h1>
-          <div className="title-section">
-            <span className="role">FREELANCE</span>
-            <span className="separator">-</span>
-            <span className="role">DEVELOPER</span>
-          </div>
-          <div className="coordinates">
-            <span>43.6047° N,</span>
-            <span className="space">1.4442° E</span>
+        <div
+          className="div7"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          <div className="ascii-grid">
+            {Array.from({ length: 144 }).map((_, i) => (
+              <AsciiChar key={i} isActive={isHovering} />
+            ))}
           </div>
         </div>
-      </main>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
