@@ -1,0 +1,75 @@
+.contact-page {
+  min-height: calc(100vh - 53px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  padding: 1rem;
+}
+
+.contact-grid {
+  width: 100%;
+  max-width: 440px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-grid > div {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  text-align: center;
+  gap: 6px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-grid > div:hover {
+  background-color: var(--hover-background-color);
+  color: var(--hover-text-color);
+}
+
+.contact-title {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+}
+
+.contact-email {
+  a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 0.9rem;
+  }
+  &:hover a {
+    color: var(--hover-text-color);
+  }
+}
+
+.contact-back {
+  a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 0.85rem;
+  }
+  &:hover a {
+    color: var(--hover-text-color);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+}

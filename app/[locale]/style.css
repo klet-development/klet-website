@@ -1,0 +1,292 @@
+/* ── Home Page ── */
+
+.home {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
+/* ── Hero ── */
+
+.hero {
+  min-height: calc(100vh - 53px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+}
+
+.hero-title {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+  line-height: 1.1;
+}
+
+.hero-tagline {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 520px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero-ascii {
+  margin-top: 48px;
+  width: 100%;
+  max-width: 480px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.hero .ascii-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  --cell-size: 18px;
+  grid-template-columns: repeat(20, var(--cell-size));
+  grid-template-rows: repeat(6, var(--cell-size));
+  gap: 0;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero .ascii-grid > span {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Section shared ── */
+
+.section-title {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin: 0 0 48px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Services ── */
+
+.services {
+  padding: 80px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 32px 24px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: var(--hover-background-color);
+  color: var(--hover-text-color);
+}
+
+.service-card:hover .service-tech {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.service-name {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.service-card:hover .service-desc {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.service-tech {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+}
+
+/* ── Clients ── */
+
+.clients {
+  padding: 80px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clients-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  align-items: center;
+  justify-items: center;
+}
+
+.client-logo {
+  height: 28px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.client-logo:hover {
+  opacity: 0.7;
+}
+
+/* ── About ── */
+
+.about {
+  padding: 80px 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 20px;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-tech {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.85rem !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+  letter-spacing: 0.03em;
+}
+
+/* ── CTA ── */
+
+.cta {
+  padding: 100px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-text {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: clamp(1.3rem, 3vw, 2.2rem);
+  font-weight: 300;
+  margin: 0 0 32px;
+  letter-spacing: 0.02em;
+}
+
+.cta-link {
+  display: inline-block;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1rem;
+  color: var(--main-text-color);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 32px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.cta-link:hover {
+  background-color: var(--hover-background-color);
+  color: var(--hover-text-color);
+  border-color: var(--hover-background-color);
+}
+
+/* ── Desktop ── */
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 120px 48px;
+  }
+
+  .hero-ascii {
+    max-width: 600px;
+    height: 120px;
+  }
+
+  .hero .ascii-grid {
+    --cell-size: 22px;
+    grid-template-columns: repeat(24, var(--cell-size));
+  }
+
+  .services {
+    padding: 120px 48px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .clients {
+    padding: 120px 48px;
+  }
+
+  .clients-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .client-logo {
+    height: 36px;
+    max-width: 160px;
+  }
+
+  .about {
+    padding: 120px 48px;
+  }
+
+  .cta {
+    padding: 140px 48px;
+  }
+}

@@ -1,0 +1,114 @@
+.legal-page {
+  min-height: calc(100vh - 53px);
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  padding: 60px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.legal-container {
+  width: 100%;
+  max-width: 640px;
+}
+
+.legal-title {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin: 0 0 48px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.legal-section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legal-section:last-of-type {
+  border-bottom: none;
+}
+
+.legal-section h2 {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.legal-section p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.legal-dl {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+
+.legal-dl > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legal-dl dt {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.legal-dl dd {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.legal-back {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.legal-back a {
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.legal-back a:hover {
+  color: var(--main-text-color);
+}
+
+@media (min-width: 1024px) {
+  .legal-page {
+    padding: 80px 48px;
+  }
+
+  .legal-title {
+    font-size: 1.5rem;
+  }
+
+  .legal-dl > div {
+    flex-direction: row;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  .legal-dl dt {
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+}

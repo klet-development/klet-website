@@ -1,0 +1,75 @@
+---
+title: "Discriminated Unions in TypeScript"
+description: "How discriminated unions eliminate type bugs and make your state modeling safer and more expressive."
+date: "2026-03-11"
+---
+
+Discriminated unions are one of the most powerful patterns in TypeScript. And yet they're underused.
+
+## The problem without discriminated unions
+
+```typescript
+type Request = {
+  status: "idle" | "loading" | "success" | "error";
+  data?: User[];
+  error?: string;
+};
+```
+
+This type is lying. Nothing prevents `{ status: "success", error: "oops" }` or `{ status: "error" }` with no error message. The compiler can't help you.
+
+## The fix: discriminated union
+
+```typescript
+type Request =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "success"; data: User[] }
+  | { status: "error"; error: string };
+```
+
+Now `status` is the discriminant. TypeScript narrows the type in each branch:
+
+```typescript
+function render(req: Request) {
+  switch (req.status) {
+    case "success":
+      return req.data.map(renderUser); // data is guaranteed here
+    case "error":
+      return <ErrorMessage message={req.error} />; // error is guaranteed here
+  }
+}
+```
+
+## With nested objects
+
+The pattern scales naturally to Redux actions or events:
+
+```typescript
+type Action =
+  | { type: "USER_FETCH_START" }
+  | { type: "USER_FETCH_SUCCESS"; payload: User[] }
+  | { type: "USER_FETCH_ERROR"; payload: string };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "USER_FETCH_SUCCESS":
+      return { ...state, users: action.payload }; // payload: User[] ✓
+  }
+}
+```
+
+## When to reach for it
+
+- Loading state modeling (idle/loading/success/error)
+- Reducer actions
+- Events with variable payloads
+- Function results that can fail
+
+## What you gain
+
+- **Exhaustiveness**: TypeScript warns if you miss a case
+- **Zero coercion**: no more `as` or `!`
+- **Maintainability**: adding a new state forces you to handle all existing cases
+
+This is one of the rare features where typing genuinely makes code more readable, not just safer.

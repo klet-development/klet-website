@@ -1,0 +1,84 @@
+{
+  "header": {
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2016-2026 KLET Development",
+    "location": "Paris · Toulouse, France",
+    "legal": "Legal"
+  },
+  "home": {
+    "hero": {
+      "title": "KLET DEVELOPMENT",
+      "tagline": "I build the product. You build the business.",
+      "subtitle": "Senior developer. 10 years taking projects from concept to production — design, architecture, code, and delivery."
+    },
+    "services": {
+      "title": "[ SERVICES ]",
+      "web": {
+        "name": "Web Development",
+        "description": "Production-grade web apps — fast, accessible, built to scale. From UI design to deployment, I handle the full delivery.",
+        "tech": "React · TypeScript · Node.js · Next.js"
+      },
+      "mobile": {
+        "name": "Mobile Development",
+        "description": "iOS & Android apps, single codebase. I handle the full lifecycle — development, integration, and store deployment.",
+        "tech": "React Native"
+      },
+      "consulting": {
+        "name": "Technical Consulting",
+        "description": "Architecture reviews, performance audits, and technical roadmaps. I help your team make better engineering decisions.",
+        "tech": "Architecture · Performance · DevOps"
+      }
+    },
+    "about": {
+      "title": "[ ABOUT ]",
+      "story": "I'm Kameron — senior developer, building production-grade applications since 2016. I take care of the full scope: from specifications and design to development and maintenance.",
+      "approach": "Need someone to integrate into your team? I adapt fast. Need to build a product from scratch? I handle everything from Figma to deployment. No unnecessary process, just delivery. Based in France, working with teams across Europe.",
+      "tech": "React · TypeScript · Node.js · React Native · PostgreSQL · AWS"
+    },
+    "clients": {
+      "title": "[ TRUSTED BY ]"
+    },
+    "cta": {
+      "text": "Got a project in mind?",
+      "link": "Start a conversation"
+    }
+  },
+  "blog": {
+    "title": "[ BLOG ]",
+    "back": "← home",
+    "backToBlog": "← blog",
+    "readMore": "read →",
+    "publishedOn": "published on"
+  },
+  "contact": {
+    "title": "[ CONTACT ]",
+    "back": "← home"
+  },
+  "legal": {
+    "title": "[ LEGAL ]",
+    "back": "← home",
+    "editor": {
+      "title": "Publisher",
+      "companyName": "KLET Development",
+      "siren": "913 792 248",
+      "email": "contact@klet-development.com"
+    },
+    "hosting": {
+      "title": "Hosting",
+      "provider": "Vercel Inc.",
+      "address": "440 N Barranca Ave #4133, Covina, CA 91723, USA",
+      "website": "vercel.com"
+    },
+    "privacy": {
+      "title": "Privacy",
+      "content": "This website does not use cookies. Anonymous usage analytics are collected via Vercel Analytics to improve the user experience. No personal data is collected, stored, or shared with third parties."
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "All content on this website (text, images, code) is the property of KLET Development unless otherwise stated. Any reproduction without prior written authorization is prohibited."
+    }
+  }
+}

@@ -1,0 +1,75 @@
+---
+title: "Les unions discriminées en TypeScript"
+description: "Comment les unions discriminées éliminent les bugs de typage et rendent votre code d'état plus sûr et plus expressif."
+date: "2026-03-11"
+---
+
+Les unions discriminées sont l'un des patterns les plus puissants de TypeScript. Pourtant, elles sont sous-utilisées.
+
+## Le problème sans unions discriminées
+
+```typescript
+type Request = {
+  status: "idle" | "loading" | "success" | "error";
+  data?: User[];
+  error?: string;
+};
+```
+
+Ce type est menteur. Rien n'empêche `{ status: "success", error: "oops" }` ou `{ status: "error" }` sans message d'erreur. Le compilateur ne peut pas vous aider.
+
+## La solution : union discriminée
+
+```typescript
+type Request =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "success"; data: User[] }
+  | { status: "error"; error: string };
+```
+
+Maintenant le discriminant est `status`. TypeScript affine le type dans chaque branche :
+
+```typescript
+function render(req: Request) {
+  switch (req.status) {
+    case "success":
+      return req.data.map(renderUser); // data est garanti ici
+    case "error":
+      return <ErrorMessage message={req.error} />; // error est garanti ici
+  }
+}
+```
+
+## Avec des objets imbriqués
+
+Le pattern s'étend naturellement aux actions Redux ou aux events :
+
+```typescript
+type Action =
+  | { type: "USER_FETCH_START" }
+  | { type: "USER_FETCH_SUCCESS"; payload: User[] }
+  | { type: "USER_FETCH_ERROR"; payload: string };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "USER_FETCH_SUCCESS":
+      return { ...state, users: action.payload }; // payload: User[] ✓
+  }
+}
+```
+
+## Quand l'utiliser
+
+- Modélisation d'états de chargement (idle/loading/success/error)
+- Actions dans un reducer
+- Events avec payloads variables
+- Résultats de fonctions qui peuvent échouer
+
+## Ce que vous gagnez
+
+- **Exhaustivité** : TypeScript vous avertit si vous oubliez un cas
+- **Zéro coercition** : plus de `as` ou `!`
+- **Maintenabilité** : ajouter un état force à traiter tous les cas existants
+
+C'est l'une des rares fonctionnalités où le typage rend réellement le code plus lisible, pas juste plus sûr.

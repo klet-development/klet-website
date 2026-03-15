@@ -1,0 +1,84 @@
+{
+  "header": {
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© 2016-2026 KLET Development",
+    "location": "Paris · Toulouse, France",
+    "legal": "Mentions légales"
+  },
+  "home": {
+    "hero": {
+      "title": "KLET DEVELOPMENT",
+      "tagline": "Je construis le produit. Vous développez le business.",
+      "subtitle": "Développeur senior. 10 ans à mener des projets du concept à la production — design, architecture, code et livraison."
+    },
+    "services": {
+      "title": "[ SERVICES ]",
+      "web": {
+        "name": "Développement Web",
+        "description": "Applications web production-ready — rapides, accessibles, pensées pour scaler. Du design UI au déploiement, je me charge de toute la livraison.",
+        "tech": "React · TypeScript · Node.js · Next.js"
+      },
+      "mobile": {
+        "name": "Développement Mobile",
+        "description": "Apps iOS & Android, codebase unique. Je gère tout le cycle — développement, intégration et déploiement sur les stores.",
+        "tech": "React Native"
+      },
+      "consulting": {
+        "name": "Conseil Technique",
+        "description": "Revues d'architecture, audits de performance et feuilles de route techniques. J'aide votre équipe à prendre de meilleures décisions.",
+        "tech": "Architecture · Performance · DevOps"
+      }
+    },
+    "about": {
+      "title": "[ À PROPOS ]",
+      "story": "Je suis Kameron — développeur senior, je construis des applications production-grade depuis 2016. Je me charge de tout le périmètre : de la spécification à la conception, du développement à la maintenance.",
+      "approach": "Besoin d'un renfort dans votre équipe ? Je m'intègre vite. Besoin de construire un produit de zéro ? Je me charge de tout, du Figma au déploiement. Pas de process inutile, juste de la livraison. Basé en France, au service d'équipes à travers l'Europe.",
+      "tech": "React · TypeScript · Node.js · React Native · PostgreSQL · AWS"
+    },
+    "clients": {
+      "title": "[ ILS NOUS FONT CONFIANCE ]"
+    },
+    "cta": {
+      "text": "Un projet en tête ?",
+      "link": "Discutons"
+    }
+  },
+  "blog": {
+    "title": "[ BLOG ]",
+    "back": "← accueil",
+    "backToBlog": "← blog",
+    "readMore": "lire →",
+    "publishedOn": "publié le"
+  },
+  "contact": {
+    "title": "[ CONTACT ]",
+    "back": "← accueil"
+  },
+  "legal": {
+    "title": "[ MENTIONS LÉGALES ]",
+    "back": "← accueil",
+    "editor": {
+      "title": "Éditeur",
+      "companyName": "KLET Development",
+      "siren": "913 792 248",
+      "email": "contact@klet-development.com"
+    },
+    "hosting": {
+      "title": "Hébergement",
+      "provider": "Vercel Inc.",
+      "address": "440 N Barranca Ave #4133, Covina, CA 91723, USA",
+      "website": "vercel.com"
+    },
+    "privacy": {
+      "title": "Données personnelles",
+      "content": "Ce site n'utilise pas de cookies. Des statistiques d'utilisation anonymes sont collectées via Vercel Analytics pour améliorer l'expérience utilisateur. Aucune donnée personnelle n'est collectée, stockée ou partagée avec des tiers."
+    },
+    "intellectual": {
+      "title": "Propriété intellectuelle",
+      "content": "L'ensemble du contenu de ce site (textes, images, code) est la propriété de KLET Development sauf mention contraire. Toute reproduction sans autorisation écrite préalable est interdite."
+    }
+  }
+}
