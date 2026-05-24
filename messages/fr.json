@@ -80,5 +80,59 @@
       "title": "Propriété intellectuelle",
       "content": "L'ensemble du contenu de ce site (textes, images, code) est la propriété de KLET Development sauf mention contraire. Toute reproduction sans autorisation écrite préalable est interdite."
     }
+  },
+  "sfpPrivacy": {
+    "title": "[ POLITIQUE DE CONFIDENTIALITÉ — APPLICATION SFP 2026 ]",
+    "back": "← accueil",
+    "app": {
+      "title": "L'application",
+      "nameLabel": "Nom",
+      "name": "SFP 2026 — Congrès de la Société Française de Pédiatrie",
+      "publisherLabel": "Éditeur",
+      "publisher": "Société Française de Pédiatrie (SFP)",
+      "platformsLabel": "Plateformes",
+      "platforms": "iOS, Android"
+    },
+    "data": {
+      "title": "Données collectées",
+      "intro": "L'application SFP 2026 fonctionne sans création de compte ni identification personnelle. Les seules données traitées sont les suivantes :",
+      "auth": {
+        "label": "Authentification anonyme",
+        "value": "Un identifiant technique anonyme (UID Firebase) est généré automatiquement à l'installation pour permettre l'envoi de notes de sessions. Cet identifiant n'est lié à aucune information personnelle (nom, email, appareil) et ne permet pas de vous identifier."
+      },
+      "ratings": {
+        "label": "Notes de sessions",
+        "value": "Lorsque vous notez une session du congrès (1 à 5 étoiles), nous enregistrons uniquement la note attribuée, l'identifiant technique de la session et l'horodatage de l'envoi. Aucune information personnelle n'est associée à cette donnée."
+      },
+      "local": {
+        "label": "Données locales (sur votre appareil)",
+        "value": "Vos favoris, vos notes personnelles et le cache des données du programme sont stockés exclusivement sur votre appareil (AsyncStorage). Ces informations ne sont jamais transmises à nos serveurs ni à des tiers."
+      },
+      "noTracking": "L'application n'utilise aucun outil de tracking, aucun service d'analytics tiers, aucune publicité et aucun cookie."
+    },
+    "purpose": {
+      "title": "Finalité du traitement",
+      "content": "Les notes de sessions sont collectées de manière anonyme dans le seul but de permettre à la Société Française de Pédiatrie d'évaluer la qualité des sessions du congrès et d'améliorer les éditions futures. Aucun profilage ni prise de décision automatisée n'est effectué."
+    },
+    "subprocessors": {
+      "title": "Sous-traitants et hébergement",
+      "content": "Les notes de sessions sont hébergées sur Google Firebase Realtime Database, service fourni par Google Ireland Limited (UE) avec possibilité de transfert vers Google LLC (États-Unis). Ces transferts sont encadrés par les Clauses Contractuelles Types adoptées par la Commission européenne et par la certification de Google au cadre Data Privacy Framework. Aucune autre donnée n'est partagée avec des tiers."
+    },
+    "retention": {
+      "title": "Durée de conservation",
+      "content": "Les notes brutes (avec horodatage) sont conservées pendant la durée du congrès SFP 2026 (10–12 juin 2026) puis supprimées au plus tard trois mois après sa clôture. Seules des données agrégées et anonymisées (moyennes par session) peuvent être conservées au-delà à des fins statistiques internes. Les données stockées localement sur votre appareil sont conservées jusqu'à la désinstallation de l'application ou jusqu'à effacement manuel depuis les réglages."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "content": "Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, d'opposition et de portabilité concernant vos données. Étant donné que l'application ne collecte aucune donnée permettant de vous identifier, l'exercice de ces droits sur les données serveur est techniquement limité. Vous pouvez à tout moment supprimer l'ensemble des données stockées localement en désinstallant l'application ou en effaçant ses données depuis les réglages de votre appareil. Pour toute question relative à cette politique, contactez-nous à l'adresse ci-dessous."
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "contact@klet-development.com"
+    },
+    "updated": {
+      "title": "Dernière mise à jour",
+      "content": "25 mai 2026"
+    }
   }
 }

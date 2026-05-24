@@ -80,5 +80,59 @@
       "title": "Intellectual Property",
       "content": "All content on this website (text, images, code) is the property of KLET Development unless otherwise stated. Any reproduction without prior written authorization is prohibited."
     }
+  },
+  "sfpPrivacy": {
+    "title": "[ PRIVACY POLICY — SFP 2026 APP ]",
+    "back": "← home",
+    "app": {
+      "title": "The Application",
+      "nameLabel": "Name",
+      "name": "SFP 2026 — Société Française de Pédiatrie Congress",
+      "publisherLabel": "Publisher",
+      "publisher": "Société Française de Pédiatrie (SFP)",
+      "platformsLabel": "Platforms",
+      "platforms": "iOS, Android"
+    },
+    "data": {
+      "title": "Data Collected",
+      "intro": "The SFP 2026 app works without account creation or personal identification. The only data processed is the following:",
+      "auth": {
+        "label": "Anonymous Authentication",
+        "value": "An anonymous technical identifier (Firebase UID) is generated automatically on install to allow you to submit session ratings. This identifier is not linked to any personal information (name, email, device) and cannot be used to identify you."
+      },
+      "ratings": {
+        "label": "Session Ratings",
+        "value": "When you rate a congress session (1 to 5 stars), we record only the rating, the technical session identifier, and the submission timestamp. No personal information is associated with this data."
+      },
+      "local": {
+        "label": "Local Data (on your device)",
+        "value": "Your favorites, personal notes, and programme data cache are stored exclusively on your device (AsyncStorage). This information is never transmitted to our servers or to third parties."
+      },
+      "noTracking": "The app does not use any tracking tools, third-party analytics, advertising, or cookies."
+    },
+    "purpose": {
+      "title": "Purpose of Processing",
+      "content": "Session ratings are collected anonymously for the sole purpose of allowing the Société Française de Pédiatrie to evaluate the quality of congress sessions and improve future editions. No profiling or automated decision-making is performed."
+    },
+    "subprocessors": {
+      "title": "Subprocessors and Hosting",
+      "content": "Session ratings are hosted on Google Firebase Realtime Database, a service provided by Google Ireland Limited (EU) with possible transfer to Google LLC (United States). These transfers are governed by the Standard Contractual Clauses adopted by the European Commission and by Google's certification under the Data Privacy Framework. No other data is shared with third parties."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "content": "Raw ratings (with timestamps) are retained for the duration of the SFP 2026 congress (June 10–12, 2026) and deleted at the latest three months after its closure. Only aggregated and anonymized data (per-session averages) may be retained beyond that period for internal statistical purposes. Locally stored data on your device is retained until the app is uninstalled or until manually cleared from device settings."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "content": "Under the GDPR, you have the rights of access, rectification, erasure, objection, and portability regarding your data. Since the app does not collect any data that can identify you, exercising these rights on server-side data is technically limited. You can delete all locally stored data at any time by uninstalling the app or clearing its data from your device settings. For any question regarding this policy, contact us at the address below."
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "contact@klet-development.com"
+    },
+    "updated": {
+      "title": "Last Updated",
+      "content": "May 25, 2026"
+    }
   }
 }
