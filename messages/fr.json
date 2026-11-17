@@ -44,6 +44,13 @@
     "cta": {
       "text": "Un projet en tête ?",
       "link": "Discutons"
+    },
+    "congress": {
+      "title": "Harpocrate · Congrès SFP",
+      "description": "Pour Harpocrate, j’ai développé l’application du Congrès des Sociétés de Pédiatrie 2026 avec React Native, Expo et TypeScript.",
+      "features": "Les participants pouvaient retrouver une intervention dans le programme, la garder en favori, repérer sa salle sur le plan interactif et exporter leurs notes après le congrès.",
+      "ios": "Voir sur l’App Store",
+      "web": "Ouvrir la version web"
     }
   },
   "blog": {

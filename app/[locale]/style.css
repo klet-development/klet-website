@@ -210,6 +210,12 @@
   letter-spacing: 0.03em;
 }
 
+.congress-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 /* ── CTA ── */
 
 .cta {

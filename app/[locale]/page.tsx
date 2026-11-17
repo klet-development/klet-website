@@ -53,6 +53,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="about" aria-labelledby="congres-sfp">
+        <h2 className="section-title" id="congres-sfp">{t("congress.title")}</h2>
+        <div className="about-content">
+          <p>{t("congress.description")}</p>
+          <p>{t("congress.features")}</p>
+          <div className="congress-links">
+            <a className="cta-link" href="https://apps.apple.com/fr/app/id6762117940">{t("congress.ios")}</a>
+            <a className="cta-link" href="https://congres-sfp.app/">{t("congress.web")}</a>
+          </div>
+        </div>
+      </section>
+
       {/* Clients */}
       <section className="clients">
         <h2 className="section-title">{t("clients.title")}</h2>
