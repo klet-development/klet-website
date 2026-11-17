@@ -60,6 +60,7 @@ export default function Home() {
           <p>{t("congress.features")}</p>
           <div className="congress-links">
             <a className="cta-link" href="https://apps.apple.com/fr/app/id6762117940">{t("congress.ios")}</a>
+            <a className="cta-link" href="https://play.google.com/store/apps/details?id=fr.congres.sfp">{t("congress.android")}</a>
             <a className="cta-link" href="https://congres-sfp.app/">{t("congress.web")}</a>
           </div>
         </div>

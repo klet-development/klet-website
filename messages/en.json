@@ -50,7 +50,8 @@
       "description": "For Harpocrate, I built the app for the 2026 French paediatric societies congress using React Native, Expo and TypeScript.",
       "features": "Attendees could find a talk in the programme, save it to their favourites, locate the room on the interactive map and export their notes after the congress.",
       "ios": "View on the App Store",
-      "web": "Open the web app"
+      "web": "Open the web app",
+      "android": "View on Google Play"
     }
   },
   "blog": {
